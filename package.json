@@ -13,7 +13,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run p:fix"
+      "pre-commit": "npm run p:fix && npm run test && npm run lint"
     }
   },
   "private": true,
