@@ -3,15 +3,8 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 
-
-
 @NgModule({
-  declarations: [
-    HeaderComponent,
-    SidebarComponent
-  ],
-  imports: [
-    CommonModule
-  ]
+  declarations: [HeaderComponent, SidebarComponent],
+  imports: [CommonModule]
 })
-export class CoreModule { }
+export class CoreModule {}

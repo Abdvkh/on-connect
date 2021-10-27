@@ -7,15 +7,11 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "test:precommit": "ng test --watch=false --code-coverage ",
     "p:fix": "prettier --config ./.prettierrc --write \"src/{app,environments}/**/*{.ts,.html,.scss}\"",
     "p:verify": "prettier --config ./.prettierrc --write \"src/{app,environments}/**/*{.ts,.html,.scss}\"",
-    "lint": "tsc --noEmit && eslint . --ext js,ts,json --quiet --fix"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run p:fix && npm run test && npm run lint",
-      "pre-push": "eslint --rule 'no-console: 1'"
-    }
+    "lint": "tsc --noEmit && eslint . --ext js,ts,json --quiet --fix",
+    "prepare": "husky install"
   },
   "private": true,
   "dependencies": {

@@ -8,16 +8,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { entityConfig } from './entity-metadata';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    EntityDataModule.forRoot(entityConfig)
-  ],
+  declarations: [AppComponent],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, EntityDataModule.forRoot(entityConfig)],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

@@ -5,4 +5,9 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {title = "on-connect";constructor(){console.log('a')}}
+export class AppComponent {
+  title = 'on-connect';
+  constructor() {
+    console.log('a');
+  }
+}
