@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-export $(cat .env | xargs) && if [$LINT_ENV === 'dev']; then eslint . --rule 'no-console: 2' fi
+export $(grep -v '^#' .env | xargs) && if [$LINT_ENV === 'dev']; then eslint . --rule 'no-console: 2' fi
