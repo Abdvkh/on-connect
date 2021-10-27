@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "test:precommit": "ng test --watch=false --code-coverage ",
+    "test:precommit": "ng test --no-watch --code-coverage ",
     "p:fix": "prettier --config ./.prettierrc --write \"src/{app,environments}/**/*{.ts,.html,.scss}\"",
     "p:verify": "prettier --config ./.prettierrc --write \"src/{app,environments}/**/*{.ts,.html,.scss}\"",
     "lint": "tsc --noEmit && eslint . --ext js,ts,json --quiet --fix",
