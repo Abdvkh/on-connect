@@ -13,7 +13,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run p:fix && npm run test && npm run lint"
+      "pre-commit": "npm run p:fix && npm run test && npm run lint",
+      "pre-push": "eslint --rule 'no-console: 1'"
     }
   },
   "private": true,
