@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-set -o allexport; source .env; set +o allexport && if [$LINT_ENV == 'dev']; then eslint . --rule 'no-console: 2'; fi
+set -o allexport; source .env; set +o allexport; if [ "$LINT_ENV" = "dev" ]; then eslint . --rule "no-console: 2"; fi
