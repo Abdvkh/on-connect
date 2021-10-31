@@ -1,0 +1,16 @@
+body {
+  background: #4f7d96;
+}
+
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 50%;
+}
+
+app-register-form {
+  height: 50%;
+  width: 70%;
+}

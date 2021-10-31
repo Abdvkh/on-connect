@@ -1,4 +1,8 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Router } from '@angular/router';
+import { RouterTestingModule } from '@angular/router/testing';
+import { AuthService } from 'src/app/core/services/auth.service';
 
 import { RegisterFormComponent } from './register-form.component';
 
@@ -8,7 +12,9 @@ describe('RegisterFormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [RegisterFormComponent]
+      declarations: [RegisterFormComponent],
+      imports: [RouterTestingModule, HttpClientModule],
+      providers: [AuthService]
     }).compileComponents();
   });
 
