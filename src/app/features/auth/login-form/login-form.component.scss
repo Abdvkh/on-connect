@@ -12,6 +12,8 @@ button {
   .illustration-wrapper {
     display: flex;
 
+    width: 50%;
+
     .image {
       border-radius: 16px 0 0 16px;
 
@@ -57,6 +59,7 @@ button {
     }
 
     .login-button {
+      width: 50%;
       background-color: #fe844b;
     }
 
