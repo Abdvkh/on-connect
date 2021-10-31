@@ -5,6 +5,11 @@ import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { User } from '../models/user.model';
 
+interface Credentials {
+  username: string;
+  password: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -21,12 +26,12 @@ export class AuthService {
     return this.currentUserSubject.value;
   }
 
-  register(username: string, password: string, confirmPassword: string) {
-    return this.http.post<any>(`${environment.apiUrl}/users/register`, { username, password, confirmPassword });
+  register(username: string, password: string) {
+    return this.http.post<Credentials>(`${environment.apiUrl}/users/register`, { username, password });
   }
 
   login(username: string, password: string) {
-    return this.http.post<any>(`${environment.apiUrl}/users/authenticate`, { username, password }).pipe(
+    return this.http.post<User>(`${environment.apiUrl}/users/authenticate`, { username, password }).pipe(
       map((user) => {
         if (user && user.token) {
           localStorage.setItem('currentUser', JSON.stringify(user));

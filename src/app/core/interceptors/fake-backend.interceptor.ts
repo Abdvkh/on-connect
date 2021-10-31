@@ -61,9 +61,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
 
       user.token = `fake-jwt-token.${user.id}`;
 
-      console.log('Registered ' + user);
-
-      return ok(user);
+      return ok({user, message: 'Registered ' + user.username});
     }
 
     function authenticate() {
