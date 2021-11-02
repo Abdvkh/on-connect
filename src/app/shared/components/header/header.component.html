@@ -1,0 +1,33 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <div class="brand">
+      <img class="logo" src="assets/images/logo-long.svg" alt="logo" />
+    </div>
+    <span class="space"></span>
+    <div class="actions">
+      <mat-select formControlName="language">
+        <mat-option value="ru">RU</mat-option>
+        <mat-option value="en">EN</mat-option>
+      </mat-select>
+      <mat-icon aria-hidden="false">text_fields</mat-icon>
+      <mat-icon aria-hidden="false">fullscreen</mat-icon>
+      <mat-icon aria-hidden="false">search</mat-icon>
+      <div class="user">
+        <div class="info">
+          <span class="fullname">Abubakr Abduvakhidov</span>
+          <small class="role">Admin</small>
+        </div>
+        <img class="ava" src="assets/images/ava.jpeg" alt="user ava" />
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <mat-icon>expand_more</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <mat-icon>exit_to_app</mat-icon>
+            <span>Logout</span>
+          </button>
+        </mat-menu>
+      </div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
