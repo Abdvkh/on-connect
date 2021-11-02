@@ -30,10 +30,7 @@ export class RegisterFormComponent {
     this.loading = true;
 
     this.authService
-      .register(
-        this.registerForm.get('username')?.value,
-        this.registerForm.get('password')?.value,
-      )
+      .register(this.registerForm.get('username')?.value, this.registerForm.get('password')?.value)
       .pipe(switchMap((user) => this.authService.login(user.username, user.password)))
       .pipe(first())
       .subscribe(

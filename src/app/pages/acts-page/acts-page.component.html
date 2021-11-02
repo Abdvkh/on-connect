@@ -1,4 +1,64 @@
-<mat-drawer-container class="example-container">
-  <mat-drawer mode="side" opened>Drawer content</mat-drawer>
-  <mat-drawer-content>Main content</mat-drawer-content>
+<app-header></app-header>
+<mat-drawer-container class="container">
+  <mat-drawer class="sidebar" mode="side" opened>
+    <mat-list role="list">
+      <mat-list-item role="listitem">
+        <mat-icon>assignment_turned_in</mat-icon>
+        <a class="sidebar-link" routerLink="/acts/create" routerLinkActive="router-link-active"> Create act </a>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        <mat-icon>description</mat-icon>
+        <a class="sidebar-link" routerLink="/acts" routerLinkActive="router-link-active">
+          <span matBadge="4" matBadgeOverlap="false"> Acts </span>
+        </a>
+      </mat-list-item>
+    </mat-list>
+  </mat-drawer>
+  <mat-drawer-content class="content">
+    <mat-tab-group class="tabs">
+      <mat-tab class="tab">
+        <ng-template mat-tab-label>
+          <span matBadge="4" matBadgeOverlap="false">{{ tabsConfig.eRequests.title }}</span>
+        </ng-template>
+        <ng-template matTabContent class="tab-content">
+          <mat-form-field class="search" appearance="outline">
+            <mat-label>Search</mat-label>
+            <mat-icon matPrefix>filter_list</mat-icon>
+            <input type="text" matInput />
+            <mat-icon matSuffix>search</mat-icon>
+          </mat-form-field>
+          <mat-list role="list" *ngFor="let act of acts">
+            <mat-list-item role="listitem">
+              <div mat-line>
+                <div class="act-item-header">
+                  <span class="id">{{ act.id }}</span>
+                  <span class="download-date">{{ act.download_date | date: 'dd.MM.yyyy' }}</span>
+                  <span class="action-date">{{ act.action_date | date: 'dd.MM.yyyy hh:mm' }}</span>
+                </div>
+              </div>
+              <div mat-line>
+                <span class="title">{{ act.title }}</span>
+              </div>
+              <div mat-line>
+                <span class="status">{{ act.status }}</span>
+              </div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+          </mat-list>
+        </ng-template>
+      </mat-tab>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <span matBadge="4" matBadgeOverlap="false">{{ tabsConfig.registration.title }}</span>
+        </ng-template>
+        Content
+      </mat-tab>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <span matBadge="4" matBadgeOverlap="false">{{ tabsConfig.division.title }}</span>
+        </ng-template>
+        Content
+      </mat-tab>
+    </mat-tab-group>
+  </mat-drawer-content>
 </mat-drawer-container>

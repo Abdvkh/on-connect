@@ -6,6 +6,15 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSelectModule } from '@angular/material/select';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatListModule } from '@angular/material/list';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
   declarations: [],
@@ -20,7 +29,16 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatInputModule,
     MatIconModule,
     MatDividerModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatToolbarModule,
+    MatSelectModule,
+    MatMenuModule,
+    MatListModule,
+    MatTabsModule,
+    MatBadgeModule,
+    MatChipsModule,
+    MatGridListModule,
+    MatExpansionModule
   ],
   exports: [
     CommonModule,
@@ -33,7 +51,16 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatInputModule,
     MatIconModule,
     MatDividerModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatToolbarModule,
+    MatSelectModule,
+    MatMenuModule,
+    MatListModule,
+    MatTabsModule,
+    MatBadgeModule,
+    MatChipsModule,
+    MatGridListModule,
+    MatExpansionModule
   ]
 })
 export class MUIModule {}
